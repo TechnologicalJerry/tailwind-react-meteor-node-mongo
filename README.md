@@ -59,4 +59,24 @@ This application is ready to be containerized and deployed using Docker.
 *   `server/`: Server-side logic, API endpoints, and entry point (`main.ts`).
 *   `imports/`: Shared code, collections, and common utilities accessible by both client and server.
 *   `Dockerfile`: Multi-stage Docker build configuration for creating a production-ready Node.js image.
-*   `docker-compose.yml`: Docker Compose configuration for running the application and its MongoDB dependency.
+*   `docker-compose.yml`: Docker Compose configuration for running the application and its MongoDB dependency.sh to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+## Folder Structure
+```
+meteor-tailwind-react/
+├── client/
+│   ├── main.jsx           # React entry point
+│   ├── styles.css           # Tailwind CSS setup
+│   └── ...
+├── imports/
+│   ├── api/                # Meteor methods/publications
+│   ├── components/         # Reusable React components
+│   └── collections/        # MongoDB collections
+├── server/
+│   ├── main.js              # Server entry point
+│   └── publications.js      # Server publications
+├── package.json             # Meteor packages
+├── .gitignore
+└── README.md
+```
