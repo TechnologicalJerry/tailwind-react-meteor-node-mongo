@@ -1,85 +1,62 @@
-# Meteor + Tailwind CSS + React Boilerplate
+# Meteor SaaS Dashboard
 
-A modern development boilerplate combining Meteor.js for the backend and React with Tailwind CSS for the frontend.
+A modern, scalable SaaS dashboard template built with a robust, full-stack JavaScript ecosystem.
 
-## Features
+## Tech Stack
 
--   **Meteor.js** (v3): Fast, real-time web application framework
--   **React** (v18): Component-based UI library
--   **Tailwind CSS**: Utility-first CSS framework
--   **SSR**: Server-Side Rendering for better SEO
--   **ES6+**: Modern JavaScript syntax
+*   **Framework:** [Meteor.js](https://www.meteor.com/)
+*   **Frontend:** [React](https://reactjs.org/) (v18)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+*   **State Management:** [Zustand](https://github.com/pmndrs/zustand)
+*   **Language:** [TypeScript](https://www.typescriptlang.org/)
+*   **Database:** MongoDB (via Meteor)
 
 ## Prerequisites
 
--   **Node.js** (v18 or higher)
--   **MongoDB** (v5 or higher)
--   **npm** (usually comes with Node.js)
+*   [Meteor](https://docs.meteor.com/install.html) installed on your system.
+*   [Node.js](https://nodejs.org/en/) and npm.
+*   [Docker](https://www.docker.com/) and Docker Compose (for containerized deployment).
 
-## Installation
+## Getting Started
 
-1.  Clone the repository:
-    ```bash
-    git clone <repository-url>
-    cd meteor-tailwind-react
-    ```
+### Local Development
 
-2.  Install Meteor globally:
-    ```bash
-    npm install -g meteor
-    ```
-
-3.  Install dependencies:
+1.  **Install dependencies:**
     ```bash
     meteor npm install
     ```
 
-## Usage
+2.  **Start the development server:**
+    ```bash
+    npm start
+    ```
+    This will start the Meteor app. It should be available at `http://localhost:3000`.
 
-### Development
+### Scripts
 
-Start the development server with hot-reload:
+*   `npm start`: Starts the Meteor development server.
+*   `npm test`: Runs the test suite using Mocha.
+*   `npm run test-app`: Runs tests in full-app mode with a watcher.
+*   `npm run lint`: Runs ESLint to check for code quality and style issues.
+*   `npm run visualize`: Analyzes the client bundle size.
 
-```bash
-meteor
-```
+## Docker Deployment
 
-Open your browser at [http://localhost:3000](http://localhost:3000)
+This application is ready to be containerized and deployed using Docker.
 
-### Production Build
+1.  **Build and run using Docker Compose:**
+    ```bash
+    docker-compose up --build
+    ```
+    This command will build the Meteor application image using the provided `Dockerfile` and start both the application and a MongoDB instance as defined in `docker-compose.yml`.
 
-Create a production build:
+2.  **Access the application:**
+    The application will be exposed on port `3000`. Open `http://localhost:3000` in your browser.
 
-```bash
-meteor build --server-only --directory ../build
-```
+## Project Structure
 
-The build will be created in a folder named `build` in the parent directory.
-
-## Folder Structure
-
-```
-meteor-tailwind-react/
-├── client/
-│   ├── main.jsx           # React entry point
-│   ├── styles.css           # Tailwind CSS setup
-│   └── ...
-├── imports/
-│   ├── api/                # Meteor methods/publications
-│   ├── components/         # Reusable React components
-│   └── collections/        # MongoDB collections
-├── server/
-│   ├── main.js              # Server entry point
-│   └── publications.js      # Server publications
-├── package.json             # Meteor packages
-├── .gitignore
-└── README.md
-```
-
-## Contributing
-
-1.  Fork the repository
-2.  Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+*   `client/`: Client-side React components, styles, and entry point (`main.tsx`).
+*   `server/`: Server-side logic, API endpoints, and entry point (`main.ts`).
+*   `imports/`: Shared code, collections, and common utilities accessible by both client and server.
+*   `Dockerfile`: Multi-stage Docker build configuration for creating a production-ready Node.js image.
+*   `docker-compose.yml`: Docker Compose configuration for running the application and its MongoDB dependency.
