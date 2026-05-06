@@ -1,0 +1,49 @@
+{
+  "name": "meteor-saas-dashboard",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "lint": "eslint . --ext js,jsx,ts,tsx"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.23.6",
+    "@heroicons/react": "^2.1.1",
+    "@meteorjs/eslint-config-meteor": "^1.0.5",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.303.0",
+    "meteor-node-stubs": "^1.2.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
+    "simpl-schema": "^3.4.6",
+    "tailwind-merge": "^2.2.0",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@types/meteor": "^2.9.7",
+    "@types/mocha": "^10.0.6",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "postcss": "^8.4.32",
+    "postcss-load-config": "^5.0.2",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.tsx",
+      "server": "server/main.ts"
+    },
+    "testModule": "tests/main.ts"
+  }
+}
