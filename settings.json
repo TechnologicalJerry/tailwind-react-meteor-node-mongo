@@ -1,0 +1,10 @@
+{
+  "public": {
+    "analytics": "UA-XXXX-Y"
+  },
+  "private": {
+    "apiKeys": {
+      "mailgun": "key-xyz"
+    }
+  }
+}
